@@ -1,0 +1,22 @@
+body {
+    background-color:rgba(117, 59, 59, 0.897)
+}
+
+.tamanhoCard{
+    width: 18.5rem;
+}
+.front{
+    
+    padding: 0 !important;
+}
+.front img{
+    width: 17.3rem;
+}
+.border10{
+    border: 10px rgb(202, 188, 188)  solid;
+    border-radius: 10px;
+}
+li:hover{
+    background-color: aqua;
+
+}
