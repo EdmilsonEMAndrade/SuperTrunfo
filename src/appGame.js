@@ -22,13 +22,18 @@ export default class AppGame {
         this.tela.initEvent(this.game)
     }
     init() {
-        this.computador.classDesafiante = 0;
-        this.addCartasBaralho()
+        this.computador = new Computador(this.baralho)
+
+        this.jogador = new Jogador();
+
+
+        this.baralho.embaralhar();
         this.distribuirCartas()
         this.tela = new Tela(this.jogador, this.computador);
         this.tela.telaGame()
         this.game = new Game(this.jogador, this.computador, this.tela, this)
         this.tela.initEvent(this.game)
+        console.log(this.jogador.cartasNaMao)
     }
     addCartasBaralho() {
         for (const carro of carros) {

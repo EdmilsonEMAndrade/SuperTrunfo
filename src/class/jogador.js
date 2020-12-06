@@ -9,6 +9,7 @@ export default class Jogador {
     maoInicial(cartas) {
         this.nome = "Edmilson"
         this.classDesafiante = "desafiante";
+        this.cartasNaMao = [];
         this.cartasNaMao = cartas;
     }
     perdeCarta() {

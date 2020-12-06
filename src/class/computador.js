@@ -7,6 +7,7 @@ export default class Computador {
         this.classDesafiante = 0;
     }
     maoInicial(cartas) {
+        this.cartasNaMao = [];
         this.cartasNaMao = cartas;
     }
     perdeCarta() {
