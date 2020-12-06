@@ -4,10 +4,10 @@ module.exports = {
     entry: path.resolve(__dirname, 'src', 'app.js'),
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.js',
+        filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.resolve(__dirname, 'public'),
+        contentBase: path.resolve(__dirname, 'public')
     },
     module: {
         rules: [
@@ -18,9 +18,10 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env'],
-                    },
-                },
-            },
-        ],
-    },
+                        plugins: ['@babel/plugin-proposal-object-rest-spread']
+                    }
+                }
+            }
+        ]
+    }
 };
