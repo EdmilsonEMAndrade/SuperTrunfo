@@ -22,6 +22,7 @@ export default class AppGame {
         this.tela.initEvent(this.game)
     }
     init() {
+        this.computador.classDesafiante = 0;
         this.addCartasBaralho()
         this.distribuirCartas()
         this.tela = new Tela(this.jogador, this.computador);
