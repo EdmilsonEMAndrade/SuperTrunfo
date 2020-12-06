@@ -1,14 +1,14 @@
-const user = [{
-    "usuario": "Edmilson",
+export const users = [{
+    "user": "Edmilson",
     "email": "ed@growdev.com",
     "password": "1234"
 }, {
-    "usuario": "Admin",
+    "user": "Admin",
     "email": "admin@growdev.com",
     "password": "4321"
 },
 {
-    "usuario": "Andrade",
+    "user": "Andrade",
     "email": "1",
     "password": "1"
 }]

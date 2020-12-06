@@ -210,11 +210,6 @@ html{
     outline: 0;
     
 }
-.form-group-ed input:hover, .form-group-ed button:hover {
-    
-    background-color: #E8F0FE;
-
-}
 
 .form-group-ed{
     margin-top: 1vh;

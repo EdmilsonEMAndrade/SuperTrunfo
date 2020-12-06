@@ -43,17 +43,15 @@
                     <!-- Recover Password -->
                     <div class="form-group-ed register login recover">
                         <label for="email"></label>
-                        <input type="email" id="email" name="email" placeholder="E-mail" value=""
-                            onkeyup="changeColor()" required />
+                        <input type="email" id="email" name="email" placeholder="E-mail" value="" required />
                     </div>
                     <!-- Senha -->
                     <!-- Page register -->
                     <!-- Page Login -->
                     <div class="form-group-ed register login">
                         <label for="password"></label>
-                        <input type="password" id="password" name="password" placeholder="senha" value=""
-                            onkeyup="changeColor()" required />
-                        <button onclick="mudar()" id="show">Mostrar</button>
+                        <input type="password" id="password" name="password" placeholder="senha" value="" required />
+                        <button id="show">Mostrar</button>
                     </div>
                     <!-- Confirmar Senha -->
                     <!-- Page register -->
@@ -66,15 +64,18 @@
                     <!-- Botões -->
                     <!-- Page register -->
                     <div class="register button">
-                        <button type="submit" onclick="register()">Cadastrar</button>
+                        <button type="submit" id="cadastrarUser">Cadastrar</button>
+                        <!-- <button type="submit" onclick="register()" id="cadastrarUser">Cadastrar</button> -->
                     </div>
                     <!-- Recover Password -->
                     <div class="recover button">
-                        <button type="submit" onclick="recover()">Recuperar</button>
+                        <button type="submit" id="recuperarSenha">Recuperar</button>
+                        <!-- <button type="submit" onclick="recover()" id="recuperarSenha">Recuperar</button> -->
                     </div>
                     <!-- Page Login -->
                     <div class="login button">
-                        <button type="submit" onclick="login()">Entrar</button>
+                        <button type="submit" id="entrar">Entrar</button>
+                        <!-- <button type="submit" onclick="login()" id="entrar">Entrar</button> -->
                     </div>
 
 
@@ -106,7 +107,9 @@
 
                     <div id="forgot">
 
-                        <a onclick="recoverPassword()">Esqueceu a Senha?</a>
+                        <a>
+                            <p id="esqueceuSenha">Esqueceu a Senha?</p>
+                        </a>
 
                     </div>
                 </span>
@@ -117,8 +120,8 @@
             <span class="span">
 
                 <div id="new">
-                    <p>Não tem uma conta? <a onclick="registerNewUser()">
-                            <p><strong> Cadastre-se</strong></p>
+                    <p>Não tem uma conta? <a>
+                            <p id="cadastrese"><strong> Cadastre-se</strong></p>
                         </a>
                     </p>
                 </div>
@@ -144,7 +147,7 @@
     <div id="page">
         <div id="dadosUser">
             <h1 class="nameUser"></h1>
-            <a onclick="openJanela()"><img src="/img/discord_user.png" alt="photoUser"></a>
+            <a id="abrirJanela"><img src="/img/discord_user.png" alt="photoUser"></a>
         </div>
         <div id="history">
             <div id="game" class="d-flex"></div>
@@ -153,16 +156,16 @@
         </div>
         <div id="janela">
             <div id="logout">
-                <a onclick="logout()"><img src="/img/desligar.jpg" alt="sair"> Sair</a>
+                <a><img src="/img/desligar.jpg" alt="sair"> Sair</a>
             </div>
         </div>
     </div>
     <div id="fundo">
 
     </div>
-    <script src="/javaScript/user.js"></script>
+    <!-- <script src="/javaScript/user.js"></script>
 
-    <script src="/javaScript/landPage.js"></script>
+    <script src="/javaScript/landPage.js"></script> -->
     <script src="/bundle.js"></script>
 
 

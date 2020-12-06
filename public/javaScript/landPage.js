@@ -151,6 +151,7 @@ function openJanela() {
 function logout() {
     page.style.display = `none`
     localStorage.clear();
+    openJanela();
     showLogin();
 }
 function recover() {
