@@ -8,6 +8,7 @@ export default class Tela {
     this.atributo;
     this.cartaJogador = document.getElementById("cartaJogador")
     this.cartaComputador = document.getElementById("cartaComputador")
+    this.tutorial = false;
   }
   telaGame() {
     this.divGame.innerHTML = ` <div class="container-fluid d-flex flex-column h-100 bg-light ">
@@ -121,4 +122,6 @@ export default class Tela {
         <div id="escolha"></div>
         `;
   }
+
+
 }
