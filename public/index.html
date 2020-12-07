@@ -2,33 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/landPage.css">
-    <link rel="shortcut icon" href="/img/ed_logo.PNG" type="image/png">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/landPage.css" />
+    <link rel="shortcut icon" href="/img/ed_logo.PNG" type="image/png" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/game.css">
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/game.css" />
 
     <title>Super Trunfo</title>
 
-
      
-
 </head>
 
 <body>
     <!-- Área Inicial -->
     <div id="landPage">
-
         <div id="container">
-
             <div id="entry">
                 <div id="user">
-                    <img src="/img/user.PNG" alt="Users">
+                    <img src="/img/user.PNG" alt="Users" />
                     <!-- Usuário -->
                     <!-- Page register -->
                     <!-- Recover Password -->
@@ -78,49 +73,37 @@
                         <!-- <button type="submit" onclick="login()" id="entrar">Entrar</button> -->
                     </div>
 
-
                     <!-- Page Login -->
                     <span class="span">
-
                         <div id="or">
-                            <hr>
+                            <hr />
                             <strong>
-
-                                <p>
-                                    OU
-                                </p>
-
+                                <p>OU</p>
                             </strong>
-                            <hr>
+                            <hr />
                         </div>
 
                         <div id="face">
-
-                            <a href="https://www.facebook.com/" target="_blank"><img src="/img/face.png" alt="Facebook">
+                            <a href="https://www.facebook.com/" target="_blank"><img src="/img/face.png"
+                                    alt="Facebook" />
                                 <p><strong>Entrar com o Facebook</strong></p>
                             </a>
-
                         </div>
                     </span>
                 </div>
                 <span class="span">
-
                     <div id="forgot">
-
                         <a>
                             <p id="esqueceuSenha">Esqueceu a Senha?</p>
                         </a>
-
                     </div>
                 </span>
-
-
-
             </div>
             <span class="span">
-
                 <div id="new">
-                    <p>Não tem uma conta? <a>
+                    <p>
+                        Não tem uma conta?
+                        <a>
                             <p id="cadastrese"><strong> Cadastre-se</strong></p>
                         </a>
                     </p>
@@ -129,47 +112,60 @@
                     <p>Obtenha o aplicativo.</p>
                     <div id="imagem">
                         <a href="https://www.apple.com/br" target="_blank">
-                            <img src="/img/app_store.png" alt="App Store">
-
+                            <img src="/img/app_store.png" alt="App Store" />
                         </a>
                         <a href="https://play.google.com/" target="_blank">
-                            <img src="/img/googleplay.png" alt="Google Play">
+                            <img src="/img/googleplay.png" alt="Google Play" />
                         </a>
                     </div>
                 </div>
-
             </span>
         </div>
-
     </div>
 
     <!-- Área Logada -->
     <div id="page">
         <div id="dadosUser">
             <h1 class="nameUser"></h1>
-            <a id="abrirJanela"><img src="/img/discord_user.png" alt="photoUser"></a>
+            <button id="btnTutorial" class="btn btn-primary btn-lg" data-toggle="modal"
+                data-target="#modalTutorial">COMO
+                JOGAR</button>
+            <a id="abrirJanela"><img src="/img/discord_user.png" alt="photoUser" /></a>
         </div>
         <div id="history">
-            <div id="game" class="d-flex"></div>
+            <div id="game" class="d-flex">
 
+            </div>
+            <div id="tutotial">
+
+            </div>
 
         </div>
         <div id="janela">
             <div id="logout">
-                <a><img src="/img/desligar.jpg" alt="sair"> Sair</a>
+                <a><img src="/img/desligar.jpg" alt="sair" /> Sair</a>
             </div>
         </div>
     </div>
-    <div id="fundo">
+    <div id="fundo"></div>
 
-    </div>
-    <!-- <script src="/javaScript/user.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
 
-    <script src="/javaScript/landPage.js"></script> -->
+
+
+
+
+
+
     <script src="/bundle.js"></script>
-
-
 </body>
-
 
 </html>
