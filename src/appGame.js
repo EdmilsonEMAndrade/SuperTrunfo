@@ -25,9 +25,9 @@ export default class AppGame {
         this.tutorial = false;
     }
     init() {
-        this.computador = new Computador(this.baralho)
+        //this.computador = new Computador(this.baralho)
 
-        this.jogador = new Jogador();
+        //this.jogador = new Jogador();
 
 
         this.baralho.embaralhar();
@@ -36,7 +36,7 @@ export default class AppGame {
         this.tela.telaGame()
         this.game = new Game(this.jogador, this.computador, this.tela, this)
         this.tela.initEvent(this.game)
-        console.log(this.jogador.cartasNaMao)
+
     }
     addCartasBaralho() {
         for (const carro of carros) {
@@ -113,8 +113,7 @@ export default class AppGame {
       </div>`
         } else {
             this.buttonTutorial.innerHTML = `COMO JOGAR`
-            this.tela.telaGame()
-            this.tela.initEvent(this.game)
+            this.init()
 
         }
     }
