@@ -97,7 +97,9 @@ export default class Game {
 
         // }
 
-
+        if (!this.desafiante.nome) {
+            this.tela.itens[n + 5].style.backgroundColor = 'grey';
+        }
 
         let troca = this.desafiante;
         this.desafiante = this.oponente;
