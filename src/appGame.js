@@ -1,11 +1,12 @@
-
 import Carta from "./class/carta";
 import Baralho from "./class/baralho";
 import Tela from "./class/tela";
 import Jogador from "./class/jogador";
 import Computador from "./class/computador";
 import Game from "./class/game";
-import { carros } from "./carros"
+import {
+    carros
+} from "./carros"
 
 
 export default class AppGame {
@@ -20,6 +21,7 @@ export default class AppGame {
         this.tela.telaGame()
         this.game = new Game(this.jogador, this.computador, this.tela, this)
         this.tela.initEvent(this.game)
+
     }
     init() {
         this.computador = new Computador(this.baralho)
@@ -34,6 +36,7 @@ export default class AppGame {
         this.game = new Game(this.jogador, this.computador, this.tela, this)
         this.tela.initEvent(this.game)
         console.log(this.jogador.cartasNaMao)
+
     }
     addCartasBaralho() {
         for (const carro of carros) {
@@ -60,9 +63,13 @@ export default class AppGame {
     //     this.tela.mostrarCartaComputador(this.computador.primeiraCarta())
     // }
 
+    abrirModalTutorial() {
+        console.log("cliquei botão tutorial");
+
+    }
+
 
 }
 
 //new AppGame()
 //console.log(game)
-

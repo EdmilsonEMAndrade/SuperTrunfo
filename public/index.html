@@ -2,174 +2,173 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/landPage.css">
-    <link rel="shortcut icon" href="/img/ed_logo.PNG" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/landPage.css" />
+  <link rel="shortcut icon" href="/img/ed_logo.PNG" type="image/png" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/game.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/game.css">
+  <title>Super Trunfo</title>
 
-    <title>Super Trunfo</title>
-
-
-     
-
+   
 </head>
 
 <body>
-    <!-- Área Inicial -->
-    <div id="landPage">
+  <!-- Área Inicial -->
+  <div id="landPage">
+    <div id="container">
+      <div id="entry">
+        <div id="user">
+          <img src="/img/user.PNG" alt="Users" />
+          <!-- Usuário -->
+          <!-- Page register -->
+          <!-- Recover Password -->
+          <div class="form-group-ed register recover">
+            <label for="user"></label>
+            <input type="text" id="userInput" placeholder="Usuário" value="" required />
+          </div>
 
-        <div id="container">
+          <!-- E-mail -->
+          <!-- Page register -->
+          <!-- Page Login -->
+          <!-- Recover Password -->
+          <div class="form-group-ed register login recover">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="E-mail" value="" required />
+          </div>
+          <!-- Senha -->
+          <!-- Page register -->
+          <!-- Page Login -->
+          <div class="form-group-ed register login">
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="senha" value="" required />
+            <button id="show">Mostrar</button>
+          </div>
+          <!-- Confirmar Senha -->
+          <!-- Page register -->
+          <div class="form-group-ed register">
+            <label for="confirmPassword"></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar senha" value=""
+              required />
+          </div>
 
-            <div id="entry">
-                <div id="user">
-                    <img src="/img/user.PNG" alt="Users">
-                    <!-- Usuário -->
-                    <!-- Page register -->
-                    <!-- Recover Password -->
-                    <div class="form-group-ed register recover">
-                        <label for="user"></label>
-                        <input type="text" id="userInput" placeholder="Usuário" value="" required />
-                    </div>
+          <!-- Botões -->
+          <!-- Page register -->
+          <div class="register button">
+            <button type="submit" id="cadastrarUser">Cadastrar</button>
+            <!-- <button type="submit" onclick="register()" id="cadastrarUser">Cadastrar</button> -->
+          </div>
+          <!-- Recover Password -->
+          <div class="recover button">
+            <button type="submit" id="recuperarSenha">Recuperar</button>
+            <!-- <button type="submit" onclick="recover()" id="recuperarSenha">Recuperar</button> -->
+          </div>
+          <!-- Page Login -->
+          <div class="login button">
+            <button type="submit" id="entrar">Entrar</button>
+            <!-- <button type="submit" onclick="login()" id="entrar">Entrar</button> -->
+          </div>
 
-                    <!-- E-mail -->
-                    <!-- Page register -->
-                    <!-- Page Login -->
-                    <!-- Recover Password -->
-                    <div class="form-group-ed register login recover">
-                        <label for="email"></label>
-                        <input type="email" id="email" name="email" placeholder="E-mail" value="" required />
-                    </div>
-                    <!-- Senha -->
-                    <!-- Page register -->
-                    <!-- Page Login -->
-                    <div class="form-group-ed register login">
-                        <label for="password"></label>
-                        <input type="password" id="password" name="password" placeholder="senha" value="" required />
-                        <button id="show">Mostrar</button>
-                    </div>
-                    <!-- Confirmar Senha -->
-                    <!-- Page register -->
-                    <div class="form-group-ed register">
-                        <label for="confirmPassword"></label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar senha"
-                            value="" required />
-                    </div>
-
-                    <!-- Botões -->
-                    <!-- Page register -->
-                    <div class="register button">
-                        <button type="submit" id="cadastrarUser">Cadastrar</button>
-                        <!-- <button type="submit" onclick="register()" id="cadastrarUser">Cadastrar</button> -->
-                    </div>
-                    <!-- Recover Password -->
-                    <div class="recover button">
-                        <button type="submit" id="recuperarSenha">Recuperar</button>
-                        <!-- <button type="submit" onclick="recover()" id="recuperarSenha">Recuperar</button> -->
-                    </div>
-                    <!-- Page Login -->
-                    <div class="login button">
-                        <button type="submit" id="entrar">Entrar</button>
-                        <!-- <button type="submit" onclick="login()" id="entrar">Entrar</button> -->
-                    </div>
-
-
-                    <!-- Page Login -->
-                    <span class="span">
-
-                        <div id="or">
-                            <hr>
-                            <strong>
-
-                                <p>
-                                    OU
-                                </p>
-
-                            </strong>
-                            <hr>
-                        </div>
-
-                        <div id="face">
-
-                            <a href="https://www.facebook.com/" target="_blank"><img src="/img/face.png" alt="Facebook">
-                                <p><strong>Entrar com o Facebook</strong></p>
-                            </a>
-
-                        </div>
-                    </span>
-                </div>
-                <span class="span">
-
-                    <div id="forgot">
-
-                        <a>
-                            <p id="esqueceuSenha">Esqueceu a Senha?</p>
-                        </a>
-
-                    </div>
-                </span>
-
-
-
+          <!-- Page Login -->
+          <span class="span">
+            <div id="or">
+              <hr />
+              <strong>
+                <p>OU</p>
+              </strong>
+              <hr />
             </div>
-            <span class="span">
 
-                <div id="new">
-                    <p>Não tem uma conta? <a>
-                            <p id="cadastrese"><strong> Cadastre-se</strong></p>
-                        </a>
-                    </p>
-                </div>
-                <div id="store">
-                    <p>Obtenha o aplicativo.</p>
-                    <div id="imagem">
-                        <a href="https://www.apple.com/br" target="_blank">
-                            <img src="/img/app_store.png" alt="App Store">
-
-                        </a>
-                        <a href="https://play.google.com/" target="_blank">
-                            <img src="/img/googleplay.png" alt="Google Play">
-                        </a>
-                    </div>
-                </div>
-
-            </span>
-        </div>
-
-    </div>
-
-    <!-- Área Logada -->
-    <div id="page">
-        <div id="dadosUser">
-            <h1 class="nameUser"></h1>
-            <a id="abrirJanela"><img src="/img/discord_user.png" alt="photoUser"></a>
-        </div>
-        <div id="history">
-            <div id="game" class="d-flex"></div>
-
-
-        </div>
-        <div id="janela">
-            <div id="logout">
-                <a><img src="/img/desligar.jpg" alt="sair"> Sair</a>
+            <div id="face">
+              <a href="https://www.facebook.com/" target="_blank"><img src="/img/face.png" alt="Facebook" />
+                <p><strong>Entrar com o Facebook</strong></p>
+              </a>
             </div>
+          </span>
         </div>
+        <span class="span">
+          <div id="forgot">
+            <a>
+              <p id="esqueceuSenha">Esqueceu a Senha?</p>
+            </a>
+          </div>
+        </span>
+      </div>
+      <span class="span">
+        <div id="new">
+          <p>
+            Não tem uma conta?
+            <a>
+              <p id="cadastrese"><strong> Cadastre-se</strong></p>
+            </a>
+          </p>
+        </div>
+        <div id="store">
+          <p>Obtenha o aplicativo.</p>
+          <div id="imagem">
+            <a href="https://www.apple.com/br" target="_blank">
+              <img src="/img/app_store.png" alt="App Store" />
+            </a>
+            <a href="https://play.google.com/" target="_blank">
+              <img src="/img/googleplay.png" alt="Google Play" />
+            </a>
+          </div>
+        </div>
+      </span>
     </div>
-    <div id="fundo">
+  </div>
 
+  <!-- Área Logada -->
+  <div id="page">
+    <div id="dadosUser">
+      <h1 class="nameUser"></h1>
+      <button id="btnTutorial" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalTutorial">COMO
+        JOGAR</button>
+      <a id="abrirJanela"><img src="/img/discord_user.png" alt="photoUser" /></a>
     </div>
-    <!-- <script src="/javaScript/user.js"></script>
+    <div id="history">
+      <div id="game" class="d-flex"></div>
+    </div>
+    <div id="janela">
+      <div id="logout">
+        <a><img src="/img/desligar.jpg" alt="sair" /> Sair</a>
+      </div>
+    </div>
+  </div>
+  <div id="fundo"></div>
+
+
+  <!-- Template do Modal  -->
+
+  <div id='modalTutorial' class="modal" tabindex="-1" role="dialog" aria-labelledby="modalTutorial" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Como jogar:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <script src="/javaScript/user.js"></script>
 
     <script src="/javaScript/landPage.js"></script> -->
-    <script src="/bundle.js"></script>
-
-
+  <script src="/bundle.js"></script>
 </body>
-
 
 </html>
