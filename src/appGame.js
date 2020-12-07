@@ -21,6 +21,7 @@ export default class AppGame {
         this.tela.telaGame()
         this.game = new Game(this.jogador, this.computador, this.tela, this)
         this.tela.initEvent(this.game)
+        this.buttomModal = document.getElementById("btnTutorial")
 
     }
     init() {
@@ -35,7 +36,10 @@ export default class AppGame {
         this.tela.telaGame()
         this.game = new Game(this.jogador, this.computador, this.tela, this)
         this.tela.initEvent(this.game)
-        console.log(this.jogador.cartasNaMao)
+
+
+        this.buttomTutotial = document.getElementById("btnTutorial")
+        this.mostrarTutorial();
 
     }
     addCartasBaralho() {
@@ -63,8 +67,9 @@ export default class AppGame {
     //     this.tela.mostrarCartaComputador(this.computador.primeiraCarta())
     // }
 
-    abrirModalTutorial() {
-        console.log("cliquei botão tutorial");
+    mostrarTutorial() {
+        this.buttomTutotial.onclick = () => this.tela.mostrarTelaTutorial()
+
 
     }
 

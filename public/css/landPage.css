@@ -6,7 +6,14 @@ html{
     font-family: 'Poppins', sans-serif;
 
 }
-
+#btnTutorial{
+    height: 2rem;
+    font-size: 1rem;
+    position: absolute;
+    left:2vw;
+    top:10vh;
+    z-index: 1;
+}
 
 #fundo{
     
@@ -289,7 +296,7 @@ a:link{
 
 }
 #dadosUser{
-
+    position: relative;
     margin: 0 2vw;
     width: 95vw;
     height: 10vh;

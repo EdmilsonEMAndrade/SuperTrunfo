@@ -21,12 +21,15 @@ export default class TelaLogin {
         this.pageH1 = document.getElementsByClassName(`nameUser`);
         this.janela = document.getElementById(`logout`);
 
+        //tela tutorial
+
 
         this.mostrar = true;
         this.showJanela = false
 
         this.dataBaseUser = dataBaseUser;
     }
+
     mudar() {
 
         this.mostrar = !this.mostrar

@@ -3,8 +3,17 @@ body {
 }
 #game{
   height: 85.5vh;
-    width: 100vw;
+  width: 100vw;
   position: relative;
+  
+}
+#tutorial{
+  
+    height: 85.5vh;
+    width: 100vw;
+    position: relative;
+    
+  
 }
 .desafiante{
     

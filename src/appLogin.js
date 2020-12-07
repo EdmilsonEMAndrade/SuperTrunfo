@@ -18,6 +18,7 @@ export default class AppLogin {
         this.wordCadastro = document.getElementById("cadastrese");
         this.wordEsqueceu = document.getElementById("esqueceuSenha");
         this.buttomMostar = document.getElementById("show");
+
         this.clickLogin()
     }
     initDataBase() {
@@ -35,6 +36,7 @@ export default class AppLogin {
         this.wordCadastro.onclick = () => this.telaLogin.registerNewUser();
         this.buttomMostar.onclick = () => this.telaLogin.mudar();
         this.wordEsqueceu.onclick = () => this.telaLogin.recoverPassword();
+
 
     }
 }

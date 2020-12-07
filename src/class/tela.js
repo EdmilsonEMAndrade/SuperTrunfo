@@ -8,13 +8,15 @@ export default class Tela {
     this.atributo;
     this.cartaJogador = document.getElementById("cartaJogador")
     this.cartaComputador = document.getElementById("cartaComputador")
+    this.tutorial = false;
+    this.buttomTutotial = document.getElementById("btnTutorial")
   }
   telaGame() {
-    this.divGame.innerHTML = ` <div class="container-fluid d-flex flex-column h-100 bg-light ">
+    this.divGame.innerHTML = ` <div class="container-fluid d-flex flex-column h-100 bg-light">
     
 
     <div class="row flex-grow-1 justify-content-center align-items-center">
-        <div>
+        <div class="gamePage">
             <div class="card front bg-secondary ${this.jogador.classDesafiante}" id="cartaJogador" >
             <ul class="list-group list-group-flush">
                            <li class="list-group-item text-center"><span>${this.jogador.primeiraCarta().nome}</span></li>
@@ -39,19 +41,19 @@ export default class Tela {
                 </div>
         </div>
 
-        <div class="col col-md-auto text-center">
+        <div class="col col-md-auto text-center gamePage">
             <h1><strong>vs</strong></h1>
         </div>
 
         <div class"tamanhoCard col col-md-auto desafiante" id="verso" >
         
-                    <div>
+                    <div class="gamePage">
                           <img  src="/image/versocarta.jpg"  alt="verso da carta" class="tamanhoCarta ${this.computador.classDesafiante}" id="cartaComputador">
                     </div>
                     
                     <div class="card-footer d-flex justify-content-center align-items-center flex-column">
                               
-                                    <label class="mb-0">Total de Cartas: <strong>${this.computador.tamanhoCartaMao()}</strong></label>
+                                    <label class="mb-0 gamePage">Total de Cartas: <strong>${this.computador.tamanhoCartaMao()}</strong></label>
                                 
                     </div>
         </div>
@@ -89,7 +91,7 @@ export default class Tela {
     divVerso.innerHTML = `
     <div class="container-fluid d-flex flex-column h-100 bg-light" >
     <div class="row flex-grow-1 justify-content-center align-items-center">
-        <div>
+    <div class="gamePage">
             <div class="card front bg-secondary ${this.computador.classDesafiante}" id="cartaComputador">
             <ul class="list-group list-group-flush">
                            <li class="list-group-item text-center"><span>${this.computador.primeiraCarta().nome
@@ -120,5 +122,55 @@ export default class Tela {
         </div>
         <div id="escolha"></div>
         `;
+  }
+  mostrarTelaTutorial() {
+    this.tutorial = !this.tutorial
+    if (this.tutorial) {
+      this.buttomTutotial.innerHTML = `Jogo`
+
+      this.divGame.innerHTML = `<div class="container tamanhoCarrosel h-100">
+      <div id="carouselExampleIndicators" class="carousel slide tutorial" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img class="d-block w-100 img" src="./image/objetivo.png" alt="Objetivo">
+  
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100 img" src="./image/compare.png" alt="Compare">
+  
+              </div>
+  
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="./image/ganhador.png" alt="Quem Vence">
+  
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="./image/quem_escolhe.png" alt="Quem joga">
+  
+              </div>
+          </div>
+          <a class="carousel-control-prev bg-dark" href="#carouselExampleIndicators" role="button"
+              data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next bg-dark" href="#carouselExampleIndicators" role="button"
+              data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+  </div>`
+    } else {
+      this.buttomTutotial.innerHTML = `COMO JOGAR`
+      this.telaGame()
+    }
   }
 }
