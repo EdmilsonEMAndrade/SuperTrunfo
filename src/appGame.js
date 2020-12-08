@@ -10,27 +10,21 @@ import { carros } from "./carros"
 
 export default class AppGame {
     constructor() {
+        /* Botões na tela */
+        this.buttonTutorial = document.getElementById("btnTutorial")
+        this.escutarEvent()
 
         this.baralho = new Baralho();
         this.addCartasBaralho()
         this.jogador = new Jogador();
         this.computador = new Computador(this.baralho);
-        this.distribuirCartas()
-        this.tela = new Tela(this.jogador, this.computador);
-        this.tela.telaGame()
-        this.game = new Game(this.jogador, this.computador, this.tela, this)
-        this.tela.initEvent(this.game)
-        this.buttonTutorial = document.getElementById("btnTutorial")
-        this.escutarEvent()
+        //  this.init();
+
+        /*Verificador se a tela de Tutorial está ativa default=false*/
         this.tutorial = false;
     }
     init() {
-        //this.computador = new Computador(this.baralho)
 
-        //this.jogador = new Jogador();
-
-
-        this.baralho.embaralhar();
         this.distribuirCartas()
         this.tela = new Tela(this.jogador, this.computador);
         this.tela.telaGame()
@@ -39,18 +33,17 @@ export default class AppGame {
 
     }
     addCartasBaralho() {
+        /*Pode ser modificada para usar diferentes cartas*/
         for (const carro of carros) {
             let carta = new Carta(carro);
             this.baralho.addCarta(carta)
         }
-        this.baralho.maiorValor();
-        this.baralho.embaralhar();
     }
     distribuirCartas() {
-
-        var novoArray = [];
-        var i = 0;
-        var tamanho = Math.trunc(this.baralho.cartas.length / 2);
+        this.baralho.embaralhar();
+        let novoArray = [];
+        let i = 0;
+        let tamanho = Math.trunc(this.baralho.cartas.length / 2);
         while (i < this.baralho.cartas.length) {
             novoArray.push(this.baralho.cartas.slice(i, i + tamanho));
             i += tamanho;
@@ -64,13 +57,14 @@ export default class AppGame {
         this.buttonTutorial.onclick = () => this.mostrarTelaTutorial();
     }
     mostrarTelaTutorial() {
-        console.log(this.tutorial)
-        console.log("entrou funcao")
-
+        /*Altera o estatus de exibição da tela  de tutorial */
         this.tutorial = !this.tutorial
         if (this.tutorial) {
+
+            /*Altera o Botao para retornar ao jogo */
             this.buttonTutorial.innerHTML = `VOLTAR PARA O JOGO`
 
+            /*Altera a tela de jogo para a tela de tutorial */
             this.tela.divGame.innerHTML = `<div class="container tamanhoCarrosel h-100">
           <div id="carouselExampleIndicators" class="carousel slide tutorial" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -112,9 +106,11 @@ export default class AppGame {
           </div>
       </div>`
         } else {
+            /*Altera o botoao ao retornar ao jogo */
             this.buttonTutorial.innerHTML = `COMO JOGAR`
-            this.init()
 
+            /*Inicia um novo jogo*/
+            this.init()
         }
     }
 

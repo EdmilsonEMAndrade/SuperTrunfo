@@ -10,6 +10,7 @@ export default class Baralho {
     }
     addCarta(carta) {
         this.cartas.push(carta);
+        this.maiorValor();
     }
     embaralhar() {
         this.cartas = this.cartas.sort(function () {
