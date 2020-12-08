@@ -1,36 +1,14 @@
+import Players from "./players"
 
-
-export default class Computador {
+export default class Computador extends Players {
     constructor(baralho) {
-        this.cartasNaMao = [];
+        super()
         this.baralho = baralho
         this.classDesafiante = 0;
     }
-    maoInicial(cartas) {
-        this.cartasNaMao = [];
-        this.cartasNaMao = cartas;
-    }
-    perdeCarta() {
-        this.cartasNaMao.shift();
-    }
-    tamanhoCartaMao() {
 
-        return this.cartasNaMao.length
-    }
-    primeiraCarta() {
-        return this.cartasNaMao[0];
-    }
-    ganhaRodada(oponente) {
-        //ganha a carta do oponente
-        this.cartasNaMao.push(oponente.cartasNaMao[0])
-        //passa a primeira carta para tras
-        this.cartasNaMao.push(this.cartasNaMao[0])
-        //retira a carta da frente de cada player
-        this.perdeCarta()
-    }
     decisao() {
         let comparacao = [];
-
         comparacao.push(this.primeiraCarta().velMax / this.baralho.maiorVelocidade)
         comparacao.push(this.baralho.menorPeso / this.primeiraCarta().peso)
         comparacao.push(this.baralho.menorAceleracao / this.primeiraCarta().aceleracao)
@@ -43,23 +21,16 @@ export default class Computador {
         return this.mostrarNomeDecisao(comparacao.indexOf(max))
     }
     mostrarNomeDecisao(number) {
-        this.escolha = document.getElementById("escolha");
-        switch (true) {
-            case number == 0:
-                // this.escolha.innerHTML = `<h1>Velocidade Máxima</h1>`
+        switch (number) {
+            case 0:
                 return "velMax"
-
-            case number == 1:
-                // this.escolha.innerHTML = `<h1>Peso</h1>`
+            case 1:
                 return "peso"
-            case number == 2:
-                // this.escolha.innerHTML = `<h1>Aceleração</h1>`
+            case 2:
                 return "aceleracao"
-            case number == 3:
-                // this.escolha.innerHTML = `<h1>HP</h1>`
+            case 3:
                 return "hp"
-            case number == 4:
-                // this.escolha.innerHTML = `<h1>Cilindros</h1>`
+            case 4:
                 return "cilindro"
             default:
                 console.log("error");

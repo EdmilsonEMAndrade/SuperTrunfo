@@ -1,6 +1,6 @@
 import DataBaseUser from "./dataBaseUser"
 export default class TelaLogin {
-    constructor(dataBaseUser) {
+    constructor(dataBaseUser, game) {
         // ID/Classes para carregar a página
         this.landPage = document.getElementById("landPage");
         this.registerPage = document.getElementsByClassName("register");
@@ -24,19 +24,22 @@ export default class TelaLogin {
 
         this.mostrar = true;
         this.showJanela = false
-
+        //classes
         this.dataBaseUser = dataBaseUser;
+        this.game = game;
+        //Inicializando
+        this.init();
     }
     mudar() {
 
         this.mostrar = !this.mostrar
         if (this.mostrar) {
-            //Ocultar => Mostrar
+            //Botao Ocultar => Mostrar
             this.buttonShow.innerHTML = "Mostrar";
             this.fieldPassword.setAttribute('type', 'password')
         }
         else {
-            //Mostrar => Ocultar
+            //Botao Mostrar => Ocultar
             this.buttonShow.innerHTML = "Ocultar";
             this.fieldPassword.setAttribute('type', 'text')
         };
@@ -89,32 +92,34 @@ export default class TelaLogin {
         }
 
     }
-    login(game) {
-        game.init()
+    login() {
+
         for (let index = 0; index < this.dataBaseUser.lengthDataBase(); index++) {
 
             if (this.emailUser.value == this.dataBaseUser.dataBase[index].email && this.fieldPassword.value == this.dataBaseUser.dataBase[index].password) {
-                this.landPage.style.display = `none`;
-                this.page.style.display = `flex`;
-                this.inicializarPage(index)
+                this.inicializarAreaLogada(index)
                 return
             }
         }
         alert(`Verifique seu e-mail ou senha.`)
 
     }
-    open() {
+    init() {
 
         if (localStorage.getItem(`email`)) {
             for (let index = 0; index < this.dataBaseUser.lengthDataBase(); index++) {
                 if (this.dataBaseUser.dataBase[index].email == localStorage.getItem(`email`)) {
-                    this.landPage.style.display = `none`;
-                    this.page.style.display = `flex`;
-                    this.inicializarPage(index)
+                    this.inicializarAreaLogada(index)
                     return
                 }
             }
         }
+    }
+    inicializarAreaLogada(index) {
+        this.landPage.style.display = `none`;
+        this.page.style.display = `flex`;
+        this.inicializarPage(index)
+        this.game.init()
     }
     inicializarPage(n) {
         localStorage.setItem("email", this.dataBaseUser.dataBase[n].email)
@@ -128,9 +133,9 @@ export default class TelaLogin {
             this.janela.style.display = `none`
         }
     }
-    logout(game) {
+    logout() {
 
-        game.init()
+
         this.page.style.display = `none`
         localStorage.clear();
         this.openJanela();
