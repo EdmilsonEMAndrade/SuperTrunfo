@@ -13,24 +13,24 @@ export default class Game {
 
 
         setTimeout(() => {
-            switch (true) {
-                case atributo == "velMax":
+            switch (atributo) {
+                case "velMax":
                     this.desafiante.primeiraCarta().velMax > this.oponente.primeiraCarta(0).velMax ? this.desafianteWin(0) : this.oponenteWin(0)
                     break;
 
-                case atributo == "peso":
+                case "peso":
                     this.desafiante.primeiraCarta().peso < this.oponente.primeiraCarta(1).peso ? this.desafianteWin(1) : this.oponenteWin(1)
                     break;
 
-                case atributo == "aceleracao":
+                case "aceleracao":
                     this.desafiante.primeiraCarta().aceleracao < this.oponente.primeiraCarta(2).aceleracao ? this.desafianteWin(2) : this.oponenteWin(2)
                     break;
 
-                case atributo == "hp":
+                case "hp":
                     this.desafiante.primeiraCarta().hp > this.oponente.primeiraCarta(3).hp ? this.desafianteWin(3) : this.oponenteWin(3)
                     break;
 
-                case atributo == "cilindro":
+                case "cilindro":
                     this.desafiante.primeiraCarta().cilindro > this.oponente.primeiraCarta(4).cilindro ? this.desafianteWin(4) : this.oponenteWin(4)
                     break;
                 default:
@@ -68,11 +68,8 @@ export default class Game {
                     } else {
                         alert("Fim de jogo, você perdeu")
                         this.app.init();
-
                     }
-
                     return
-
                 }
                 this.tela.telaGame()
                 if (this.desafiante.nome) {
@@ -89,13 +86,6 @@ export default class Game {
     }
 
     oponenteWin(n) {
-        // if (this.desafiante.nome) {
-        //     this.tela.itens[n + 5].style.backgroundColor = 'grey';
-        //     this.desafiante.classDesafiante = "desafiante2"
-        //     console.log(this.oponente)
-        // } else {
-
-        // }
 
         if (!this.desafiante.nome) {
             this.tela.itens[n + 5].style.backgroundColor = 'grey';
