@@ -67,8 +67,8 @@ export default class Tela {
   initEvent(game) {
 
     for (const item of this.itens) {
-      item.addEventListener('click', function () {
-
+      item.addEventListener('click', function (event) {
+        console.log(event)
         game.compararAtributo(event.path[0].attributes[1].nodeValue)
 
       });
