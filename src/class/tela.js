@@ -69,7 +69,7 @@ export default class Tela {
     for (const item of this.itens) {
       item.addEventListener('click', function (event) {
         console.log(event.composedPath()[0].childNodes[1].innerHTML)
-        game.compararAtributo(parseInt(event.composedPath()[0].childNodes[1].innerHTML))
+        game.compararAtributo(event.composedPath()[0].childNodes[1].innerHTML)
 
       });
 
