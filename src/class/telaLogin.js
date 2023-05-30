@@ -113,6 +113,8 @@ export default class TelaLogin {
                     return
                 }
             }
+        }else{
+            this.inicializarAreaLogada(1)
         }
     }
     inicializarAreaLogada(index) {
